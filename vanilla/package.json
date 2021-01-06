@@ -1,0 +1,22 @@
+{
+  "name": "vanilla",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/color": "^3.0.1",
+    "parcel-bundler": "^1.12.4",
+    "tailwindcss": "^1.9.1",
+    "typescript": "^4.0.3"
+  },
+  "scripts": {
+    "dev": "yarn build:css && parcel index.html",
+    "build:css": "tailwindcss build styles/main.css -o styles/main.out.css",
+    "build": "rm -rf dist && yarn build:css && parcel build index.html",
+    "deploy": "yarn build && netlify deploy --prod --dir dist"
+  },
+  "dependencies": {
+    "color": "^3.1.3",
+    "popmotion": "^8.7.6"
+  }
+}

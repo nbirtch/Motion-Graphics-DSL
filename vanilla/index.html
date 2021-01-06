@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CPSC 410</title>
+  </head>
+  <body>
+    <main class="bg-gray-800 px-24 py-16 flex flex-col">
+      <header class="text-white w-full mb-8 flex align-bottom justify-between">
+        <h1 class="text-lg font-bold">CPSC 410 DSL</h1>
+        <p>Nanda S. Nick B. Andrew Z. Al P. Andrew L.</p>
+      </header>
+      <section class="flex h-full">
+        <div id="input" class="mr-8 rounded-lg relative mb-16">
+          <textarea
+            id="textarea"
+            class="rounded-lg w-full h-full p-8 font-mono text-md"
+          />
+          <button
+            class="bg-blue-100 rounded-md p-4 absolute font-semibold"
+            id="exec-button"
+          >
+            Run
+          </button>
+        </div>
+        <div id="output" class="bg-white rounded-lg relative w-full mb-16">
+          <div id="controls" class="absolute">
+            <button
+              class="bg-blue-100 rounded-md p-4 font-semibold mr-2"
+              id="play-button"
+              disabled
+            >
+              Play
+            </button>
+            <button
+              class="bg-blue-100 rounded-md p-4 font-semibold"
+              id="reset-button"
+              disabled
+            >
+              Reset
+            </button>
+          </div>
+          <svg
+            id="app"
+            width="100%"
+            height="100%"
+            preserveAspectRatio="xMidYMid meet"
+          ></svg>
+          <div id="empty-message" class="text-lg">
+            Type in your program to get started!
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="scripts/main.ts"></script>
+  </body>
+</html>

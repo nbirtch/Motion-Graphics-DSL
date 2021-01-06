@@ -1,0 +1,55 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node dist/server.js",
+    "serve": "ts-node src/server.ts",
+    "serve:dev": "nodemon",
+    "test": "jest",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.8",
+    "@types/express": "^4.17.8",
+    "@types/jest": "^26.0.14",
+    "@types/node": "^14.11.2",
+    "husky": "^4.3.0",
+    "jest": "^26.5.3",
+    "lint-staged": "^10.4.0",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.1.2",
+    "ts-jest": "^26.4.1",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "prettier --write"
+    ]
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/?(*.)+(spec).+(ts|tsx|js)"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "moduleNameMapper": {
+      "@/(.*)": "<rootDir>/src/$1"
+    }
+  }
+}

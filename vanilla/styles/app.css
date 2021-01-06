@@ -1,0 +1,42 @@
+body {
+  overflow: hidden;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+}
+
+textarea {
+  resize: none;
+}
+
+#input {
+  flex: 2;
+}
+
+#output {
+  flex: 3;
+}
+
+#exec-button {
+  right: 1rem;
+  top: 1rem;
+}
+
+#controls {
+  left: 1rem;
+  top: 1rem;
+}
+
+#controls > button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#empty-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
